@@ -4,6 +4,8 @@ let box1 = document.querySelector('.box1');
 let box2 = document.querySelector('.box2');
 let box3 = document.querySelector('.box3');
 let box4 = document.querySelector('.box4');
+let box5 = document.querySelector('.box5');
+
 
 let codeTexts = document.querySelectorAll('.box h1')
 
@@ -91,6 +93,25 @@ function editBox4() {
 
 }
 
+function editBox5() {
+
+    let one = randomCode();
+    let two = randomCode();
+    let three = randomCode();
+    let four = randomCode();
+    let five = randomCode();
+    let six = randomCode();
+
+    box5.style.backgroundColor  = `#${one}${two}${three}${four}${five}${six}`;
+
+    let h1Element = document.querySelector('.box5 h1');
+
+    h1Element.innerText = `#${one}${two}${three}${four}${five}${six}`
+
+   
+
+}
+
 document.addEventListener("keydown", function(event) {
     if (event.code === "Space") {
         location.reload();
@@ -103,6 +124,7 @@ function run() {
     editBox2();
     editBox3();
     editBox4();
+    editBox5();
 
     for (let codeText of codeTexts) {
         codeText.addEventListener('click', function() {
